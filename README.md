@@ -2,9 +2,8 @@
 
 ## Sobre
 
-- O que é docker e suas vantagens
+- Criar container dentro do docker
 - Usar docker-compose -> Orquestrador de imagens do docker
-- Como criar um container ->
 - Como é feita a comunicação entre containers -> via TCP
 - Dockerfile -> Setup para criação dos containers
 - Gerenciar instalação de pacotes
@@ -12,7 +11,7 @@
 ## O que desenvolvemos
 
 - Criação de uma API que irá rodar seus serviços dentro de um container.
-- Container para API e outra API para uma image do Mongodb.
+- Container para API e outra para uma image do Mongodb.
 - Criar registro no mongodb quando acessado a rota padrão "/".
 
 ## O que foi usado
