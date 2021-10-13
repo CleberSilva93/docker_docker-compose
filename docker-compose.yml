@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  api:
+    container_name: api
+    build: .
+    command: npm start
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/app
+
+  db:
+    container_name: db
+    hostname: db
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: docker
+      MONGO_INITDB_ROOT_PASSWORD: docker
+    ports:
+      - "27017:27017"
+    expose:
+      - 27017
+    env_file:
+      - .env
+    volumes:
+      - db:/var/lib/mongodb/data
+volumes:
+  db:
+    name: db
+  exclude:
